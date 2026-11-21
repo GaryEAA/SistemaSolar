@@ -53,23 +53,23 @@ Cada una consiste en llenar la ficha en `src/Cuerpo_X.h`, conseguir una imagen p
 | `emisivo` / `sincrona` | bool | Brilla solo (Sol) / siempre muestra la misma cara (Luna) |
 | `rutaTextura` | texto | Ej. `"res/Texture/marte.jpg"` |
 
-| Código | Cuerpo (archivo) | radio | distancia | orbital (días) | rotación (h) | eje (°) | órbita (°) | fase | Especial |
-|---|---|---|---|---|---|---|---|---|---|
-| A1 | Sol (`Cuerpo_Sol.h`) | 3,0 | 0 | 0 | 609 | 7,25 | 0 | 0 | `emisivo = true` |
-| A2 | Mercurio | 0,25 | 6 | 88 | 1407,6 | 0,03 | 7,0 | 40 | El más rápido en orbitar |
-| A3 | Venus | 0,48 | 8,5 | 224,7 | 5832,5 | 177,4 | 3,4 | 250 | Gira al revés (por el eje, no con tiempo negativo) |
-| A4 | Tierra | 0,5 | 11 | 365,25 | 23,93 | 23,4 | 0 | 120 | Continentes sin espejo |
-| A5 | Luna | 0,14 | 1,1 | 27,3 | — | 6,7 | 5,1 | 0 | `padre = TIERRA`, `sincrona = true` |
-| A6 | Marte | 0,27 | 14 | 687 | 24,6 | 25,2 | 1,85 | 200 | |
-| A7 | Júpiter | 1,6 | 20 | 4333 | 9,93 | 3,1 | 1,3 | 300 | El que gira más rápido |
-| A8 | Saturno | 1,35 | 27 | 10759 | 10,7 | 26,7 | 2,5 | 70 | Anillos son la B6 |
-| A9 | Urano | 0,85 | 33 | 30687 | 17,2 | 97,8 | 0,8 | 150 | Eje casi acostado |
-| A10 | Neptuno | 0,82 | 38 | 60190 | 16,1 | 28,3 | 1,8 | 250 | |
-| A11 | Plutón | 0,18 | 43 | 90560 | 153,3 | 122,5 | 17,2 | 20 | Planeta enano; solo en modo antiguo |
+| Código | Cuerpo (archivo) | radio | distancia | orbital (días) | rotación (h) | eje (°) | órbita (°) | fase | Especial | Estado | Quién |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| A1 | Sol (`Cuerpo_Sol.h`) | 3,0 | 0 | 0 | 609 | 7,25 | 0 | 0 | `emisivo = true` | ✅ | Gary Añanga |
+| A2 | Mercurio | 0,25 | 6 | 88 | 1407,6 | 0,03 | 7,0 | 40 | El más rápido en orbitar | ⬜ | |
+| A3 | Venus | 0,48 | 8,5 | 224,7 | 5832,5 | 177,4 | 3,4 | 250 | Gira al revés (por el eje, no con tiempo negativo) | ⬜ | |
+| A4 | Tierra | 0,5 | 11 | 365,25 | 23,93 | 23,4 | 0 | 120 | Continentes sin espejo | ⬜ | |
+| A5 | Luna | 0,14 | 1,1 | 27,3 | — | 6,7 | 5,1 | 0 | `padre = TIERRA`, `sincrona = true` | 🔄 | Alejandra Galvez |
+| A6 | Marte | 0,27 | 14 | 687 | 24,6 | 25,2 | 1,85 | 200 | | ⬜ | |
+| A7 | Júpiter | 1,6 | 20 | 4333 | 9,93 | 3,1 | 1,3 | 300 | El que gira más rápido | ⬜ | |
+| A8 | Saturno | 1,35 | 27 | 10759 | 10,7 | 26,7 | 2,5 | 70 | Anillos son la B6 | 🔄 | Jadhe Sotelo |
+| A9 | Urano | 0,85 | 33 | 30687 | 17,2 | 97,8 | 0,8 | 150 | Eje casi acostado | ⬜ | |
+| A10 | Neptuno | 0,82 | 38 | 60190 | 16,1 | 28,3 | 1,8 | 250 | | ⬜ | |
+| A11 | Plutón | 0,18 | 43 | 90560 | 153,3 | 122,5 | 17,2 | 20 | Planeta enano; solo en modo antiguo | ⬜ | |
 
 **Hecho cuando:** el cuerpo se ve con su imagen real, proporcionado, y gira y orbita como indica su fila.
 
-**A12 Estrellas** : "n" puntos repartidos parejo sobre una esfera de radio 400. *Hecho cuando* se ven estrellas quietas de distinto brillo al fondo.
+**A12 Estrellas** (⬜ libre) : "n" puntos repartidos parejo sobre una esfera de radio 400. *Hecho cuando* se ven estrellas quietas de distinto brillo al fondo.
 
 ---
 
@@ -77,18 +77,18 @@ Cada una consiste en llenar la ficha en `src/Cuerpo_X.h`, conseguir una imagen p
 
 Las firmas ya están en `Contratos.h` y en cada archivo: **no cambiar nombres ni parámetros**, solo el cuerpo de la función.
 
-| Código | Tarea | Archivo |
-|---|---|---|
-| B1 | Esfera | `Esfera.h` |
-| B2 | Texturas | `Texturas.h` |
-| B3 | Movimiento | `Movimiento.h` |
-| B4 | Cámara | `Camara.h` |
-| B5 | Órbitas | `Orbitas.h` |
-| B6 | Anillos | `Anillos.h` |
-| B7 | Luz del Sol | `res/Shader/fragmentShader.glsl` |
-| B8 | Controles | `Controles.h` |
-| B9 | Modo antiguo/moderno | `ModoPluton.h` |
-| B10 | Título de ventana | `Titulo.h` |
+| Código | Tarea | Archivo | Estado | Quién |
+|---|---|---|---|---|
+| B1 | Esfera | `Esfera.h` | ✅ | Gary Añanga |
+| B2 | Texturas | `Texturas.h` | ✅ | Gary Añanga |
+| B3 | Movimiento | `Movimiento.h` | ✅ | Gary Añanga |
+| B4 | Cámara | `Camara.h` | ✅ | Gary Añanga |
+| B5 | Órbitas | `Orbitas.h` | ✅ | Gary Añanga |
+| B6 | Anillos | `Anillos.h` | ⬜ | |
+| B7 | Luz del Sol | `res/Shader/fragmentShader.glsl` | 🔄 | Gary Añanga |
+| B8 | Controles | `Controles.h` | ⬜ | |
+| B9 | Modo antiguo/moderno | `ModoPluton.h` | ⬜ | |
+| B10 | Título de ventana | `Titulo.h` | ⬜ | |
 
 ## Lista final
 
