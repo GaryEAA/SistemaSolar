@@ -4,13 +4,55 @@
 inline Malla3D generarEsfera(float radio, int sectores, int stacks)
 {
     Malla3D malla;
-    float p[6][3] = { { 0, radio, 0 }, { 0, -radio, 0 }, { radio, 0, 0 }, { -radio, 0, 0 }, { 0, 0, radio }, { 0, 0, -radio } };
-    float uv[6][2] = { { 0.5f, 1.0f }, { 0.5f, 0.0f }, { 0.0f, 0.5f }, { 1.0f, 0.5f }, { 0.25f, 0.5f }, { 0.75f, 0.5f } };
+    float sectorStep = 2.0f * PI / sectores;
+    float stackStep = PI / stacks;
 
-    for (int i = 0; i < 6; i++)
-        malla.vertices.insert(malla.vertices.end(), { p[i][0], p[i][1], p[i][2], 1.0f, 1.0f, 1.0f, uv[i][0], uv[i][1] });
+    for (int i = 0; i <= stacks; ++i)
+    {
+        float stackAngle = PI / 2.0f - i * stackStep;
+        float xz = radio * std::cos(stackAngle);
+        float y = radio * std::sin(stackAngle);
 
-    malla.indices = { 0, 4, 2, 0, 3, 4, 0, 5, 3, 0, 2, 5, 1, 2, 4, 1, 4, 3, 1, 3, 5, 1, 5, 2 };
+        for (int j = 0; j <= sectores; ++j)
+        {
+            float sectorAngle = j * sectorStep;
+            float x = xz * std::cos(sectorAngle);
+            float z = -xz * std::sin(sectorAngle);
+
+            malla.vertices.push_back(x);
+            malla.vertices.push_back(y);
+            malla.vertices.push_back(z);
+
+            malla.vertices.push_back(x / radio + 0.5f);
+            malla.vertices.push_back(y / radio + 0.5f);
+            malla.vertices.push_back(z / radio + 0.5f);
+
+            malla.vertices.push_back((float)j / sectores);
+            malla.vertices.push_back(1.0f - (float)i / stacks);
+        }
+    }
+
+    for (int i = 0; i < stacks; ++i)
+    {
+        int k1 = i * (sectores + 1);
+        int k2 = k1 + sectores + 1;
+
+        for (int j = 0; j < sectores; ++j, ++k1, ++k2)
+        {
+            if (i != 0)
+            {
+                malla.indices.push_back(k1);
+                malla.indices.push_back(k2);
+                malla.indices.push_back(k1 + 1);
+            }
+            if (i != (stacks - 1))
+            {
+                malla.indices.push_back(k1 + 1);
+                malla.indices.push_back(k2);
+                malla.indices.push_back(k2 + 1);
+            }
+        }
+    }
     return malla;
 }
 
