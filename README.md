@@ -31,7 +31,7 @@ Cada cuerpo tiene textura, rotación (gira sobre su eje) y traslación (da vuelt
 Nadie tiene partes asignadas: cada uno elige y reserva una tarea.
 
 1. **Primera ronda:** cada uno toma una tarea de la **Parte A** (un cuerpo).
-2. **Después:** quien termina toma la siguiente libre de la **Parte B**, de arriba hacia abajo.
+2. **Después:** quien termina su parte puede tomar otra de la **Parte A** o **B** (de arriba hacia abajo).
 3. **Cada tarea solo toca sus archivos.** `Contratos.h`, `Sistema.h` y `Shader.*` no se tocan sin avisar. `SistemaSolar.cpp` solo en B12.
 4. **Orden de subida:** cada persona sube una **rama por tarea** (`A4-tierra`, `B1-esfera`), que se une cuando está lista, tras compilar y ejecutar. No hay orden obligatorio entre tareas.
 
