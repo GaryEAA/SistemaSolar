@@ -56,7 +56,7 @@ Cada una consiste en llenar la ficha en `src/Cuerpo_X.h`, conseguir una imagen p
 | Código | Cuerpo (archivo) | radio | distancia | orbital (días) | rotación (h) | eje (°) | órbita (°) | fase | Especial | Estado | Quién |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | A1 | Sol (`Cuerpo_Sol.h`) | 3,0 | 0 | 0 | 609 | 7,25 | 0 | 0 | `emisivo = true` | ✅ | Gary Añanga |
-| A2 | Mercurio | 0,25 | 6 | 88 | 1407,6 | 0,03 | 7,0 | 40 | El más rápido en orbitar | ⬜ | |
+| A2 | Mercurio | 0,25 | 6 | 88 | 1407,6 | 0,03 | 7,0 | 40 | El más rápido en orbitar | 🔄 | Alexander Gabino |
 | A3 | Venus | 0,48 | 8,5 | 224,7 | 5832,5 | 177,4 | 3,4 | 250 | Gira al revés (por el eje, no con tiempo negativo) | ⬜ | |
 | A4 | Tierra | 0,5 | 11 | 365,25 | 23,93 | 23,4 | 0 | 120 | Continentes sin espejo | ⬜ | |
 | A5 | Luna | 0,14 | 1,1 | 27,3 | — | 6,7 | 5,1 | 0 | `padre = TIERRA`, `sincrona = true` | 🔄 | Alejandra Galvez |
