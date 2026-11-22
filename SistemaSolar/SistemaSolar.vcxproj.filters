@@ -24,12 +24,6 @@
     <ClCompile Include="src\vendor\glm\detail\glm.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="src\vendor\glm\stb_image\stb_image.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="src\vendor\glm\glm.cppm">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="src\vendor\stb_image\stb_image.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
