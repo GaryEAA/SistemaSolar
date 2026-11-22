@@ -69,7 +69,7 @@ Cada una consiste en llenar la ficha en `src/Cuerpo_X.h`, conseguir una imagen p
 
 **Hecho cuando:** el cuerpo se ve con su imagen real, proporcionado, y gira y orbita como indica su fila.
 
-**A12 Estrellas** (⬜ libre) : "n" puntos repartidos parejo sobre una esfera de radio 400. *Hecho cuando* se ven estrellas quietas de distinto brillo al fondo.
+**A12 Estrellas** (✅ libre) : "n" puntos repartidos parejo sobre una esfera de radio 400. *Hecho cuando* se ven estrellas quietas de distinto brillo al fondo.
 
 ---
 
@@ -85,9 +85,9 @@ Las firmas ya están en `Contratos.h` y en cada archivo: **no cambiar nombres ni
 | B4 | Cámara | `Camara.h` | ✅ | Gary Añanga |
 | B5 | Órbitas | `Orbitas.h` | ✅ | Gary Añanga |
 | B6 | Anillos | `Anillos.h` | ✅ | Jadhe Sotelo |
-| B7 | Luz del Sol | `res/Shader/fragmentShader.glsl` | 🔄 | Gary Añanga |
+| B7 | Luz del Sol | `res/Shader/fragmentShader.glsl` | ✅ | Gary Añanga |
 | B8 | Controles | `Controles.h` | ✅ | Jhon Velasquez |
-| B9 | Modo antiguo/moderno | `ModoPluton.h` | ⬜ | |
+| B9 | Modo antiguo/moderno | `ModoPluton.h` | ✅ | Gary Añanga |
 | B10 | Título de ventana | `Titulo.h` | ✅ | Jhon Velasquez |
 
 ## Lista final
