@@ -474,6 +474,9 @@
     <Image Include="res\Texture\venus.jpg">
       <Filter>Archivos de recursos</Filter>
     </Image>
+    <Image Include="res\Texture\saturno.jpg">
+      <Filter>Archivos de recursos</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Anillos.h">
