@@ -63,7 +63,7 @@ Cada una consiste en llenar la ficha en `src/Cuerpo_X.h`, conseguir una imagen p
 | A6 | Marte | 0,27 | 14 | 687 | 24,6 | 25,2 | 1,85 | 200 | | ⬜ | |
 | A7 | Júpiter | 1,6 | 20 | 4333 | 9,93 | 3,1 | 1,3 | 300 | El que gira más rápido | ⬜ | |
 | A8 | Saturno | 1,35 | 27 | 10759 | 10,7 | 26,7 | 2,5 | 70 | Anillos son la B6 | 🔄 | Jadhe Sotelo |
-| A9 | Urano | 0,85 | 33 | 30687 | 17,2 | 97,8 | 0,8 | 150 | Eje casi acostado | ⬜ | |
+| A9 | Urano | 0,85 | 33 | 30687 | 17,2 | 97,8 | 0,8 | 150 | Eje casi acostado | ⬜ | Miguel Clavo |
 | A10 | Neptuno | 0,82 | 38 | 60190 | 16,1 | 28,3 | 1,8 | 250 | | ⬜ | |
 | A11 | Plutón | 0,18 | 43 | 90560 | 153,3 | 122,5 | 17,2 | 20 | Planeta enano; solo en modo antiguo | ⬜ | |
 
