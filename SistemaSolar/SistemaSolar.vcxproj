@@ -286,7 +286,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Texture\anillos_saturno.png" />
+    <Image Include="res\Texture\jupiter.jpg" />
+    <Image Include="res\Texture\mercurio.jpg" />
     <Image Include="res\Texture\planeta_base.jpg" />
+    <Image Include="res\Texture\sol.jpg" />
+    <Image Include="res\Texture\urano.jpg" />
+    <Image Include="res\Texture\venus.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Anillos.h" />
