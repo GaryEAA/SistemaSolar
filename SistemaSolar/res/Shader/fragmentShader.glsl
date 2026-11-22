@@ -29,5 +29,16 @@ void main()
 		return;
 	}
 
-	FragColor = vec4(color.rgb, 1.0f);
+	if (emisivo == 1)
+	{
+		FragColor = vec4(color.rgb * 1.25f, 1.0f);
+		return;
+	}
+
+	vec3 N = normalize(Normal);
+	vec3 L = normalize(luzPos - FragPos);
+	float difusa = max(dot(N, L), 0.0f);
+	float luz = 0.07f + 0.93f * difusa;
+
+	FragColor = vec4(color.rgb * luz, 1.0f);
 }
