@@ -1,14 +1,10 @@
 #pragma once
-
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
-// Reading Files
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
-
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
@@ -23,14 +19,8 @@ private:
     unsigned int vertex, fragment;
 public:
     unsigned int ID;
-
-    // Constructor
     Shader(const char* vertexPath, const char* fragmentPath);
-
-    // use
     void use();
-    // utility uniform functions
-
     void setBool(const std::string& name, bool value);
     void setInt(const std::string& name, int value);
     void setFloat(const std::string& name, float value);

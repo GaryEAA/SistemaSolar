@@ -9,19 +9,15 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
 
 	try
 	{
-		// Open The Files
 		vertexShaderFile.open(vertexPath);
 		fragmentShaderFile.open(fragmentPath);
 
-		// Read The Files
 		vertexShaderStream << vertexShaderFile.rdbuf();
 		fragmentShaderStream << fragmentShaderFile.rdbuf();
 
-		// Close The Files
 		vertexShaderFile.close();
 		fragmentShaderFile.close();
 
-		// Read as a string
 		vertexCode = vertexShaderStream.str();
 		fragmentCode = fragmentShaderStream.str();
 	}
@@ -32,11 +28,9 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
 		return;
 	}
 
-	// Read as a const char
 	vertexShaderData = vertexCode.c_str();
 	fragmentShaderData = fragmentCode.c_str();
 
-	// vertex
 	this->vertex = glCreateShader(GL_VERTEX_SHADER);
 
 	glShaderSource(vertex, 1, &vertexShaderData, NULL);
@@ -52,7 +46,6 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
 		glGetShaderInfoLog(vertex, 1024, NULL, infolog);
 		std::cout << "FAILED::SHADER::VERTEX::<" << infolog << std::endl;
 	}
-	//fragment
 	this->fragment = glCreateShader(GL_FRAGMENT_SHADER);
 
 	glShaderSource(fragment, 1, &fragmentShaderData, NULL);
@@ -66,7 +59,6 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
 		std::cout << "FAILED::SHADER::FRAGMENT::<" << infolog << ">" << std::endl;
 	}
 
-	//Program
 	this->ID = glCreateProgram();
 
 	glAttachShader(ID, vertex);
