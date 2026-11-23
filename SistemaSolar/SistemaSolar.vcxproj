@@ -293,6 +293,7 @@
     <Image Include="res\Texture\pluton.jpg" />
     <Image Include="res\Texture\saturno.jpg" />
     <Image Include="res\Texture\sol.jpg" />
+    <Image Include="res\Texture\tierra.jpg" />
     <Image Include="res\Texture\urano.jpg" />
     <Image Include="res\Texture\venus.jpg" />
   </ItemGroup>
