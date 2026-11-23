@@ -290,6 +290,7 @@
     <Image Include="res\Texture\luna.jpg" />
     <Image Include="res\Texture\marte.jpg" />
     <Image Include="res\Texture\mercurio.jpg" />
+    <Image Include="res\Texture\neptuno.jpg" />
     <Image Include="res\Texture\planeta_base.jpg" />
     <Image Include="res\Texture\pluton.jpg" />
     <Image Include="res\Texture\saturno.jpg" />
